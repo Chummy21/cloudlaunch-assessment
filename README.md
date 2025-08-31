@@ -26,7 +26,7 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
 
   - **Bonus (if used)**: CloudFront URL: [CloudFront URL](https://d2iqpmag3z7xtd.cloudfront.net/)`
   - CloudFront Creation
-  - ![ClouFront](./images/cloud20%front20%distribution.png)
+  - ![CloudFront](./images/cloud%20front%20distribution.png)
 
  
   - [https://chummy7.strangled.net](https://chummy7.strangled.net)
