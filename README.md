@@ -105,6 +105,8 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
   ]
 }
 
+---
+
 - I Created a restricted IAM user cloudlaunch-user with read/write access to cloudlaunch-private-bucket, read-only access to cloudlaunch-   site-bucket, list-only access to cloudlaunch-visible-only-bucket, and read-only permissions for VPC resources, with no delete rights
   Publicly accessible (read-only for anonymous users).
 
@@ -126,8 +128,8 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
  DB (private): cloudlaunch-db-subnet – 10.0.3.0/28
 
  Subnets Created
- ![Dubnets Created](./images/cloud%20front%20distribution.png)
 
+ ![Dubnets Created](./images/subnets%20created.png
 IGW: cloudlaunch-igw (attached to cloudlaunch-vpc)
 
 Route Tables:
