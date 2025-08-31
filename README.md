@@ -43,7 +43,7 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
 
 - **IAM policy JSON** (attached to `cloudlaunch-user`):
 - This policy was attached to the three buckets( Cloudlaunch-publicly-accessible-bucket, Cloudlaunch-visible-only-bucket and Cloudlaunch-private-bucket)
-```json File used is shown below
+```json File used is shown below (JSON policy attached to the IAM user)
 
 {
   "Version": "2012-10-17",
@@ -168,18 +168,18 @@ Security Group Created:
  ![Security Group](./images/Security%20Group.png)
 
 
-Testing Summary
+---
+
+In summary, I tested it and; 
 
 cloudlaunch-user can:
 
-List all three buckets
+- List all three buckets
 
-Get from cloudlaunch-site-bucket
+- Get from cloudlaunch-site-bucket
 
-Get/Put in cloudlaunch-private-bucket
+- Get/Put in cloudlaunch-private-bucket
 
-Cannot Delete anywhere
+- Cannot Delete anywhere
 
-Cannot read objects in cloudlaunch-visible-only-bucket
-
-VPC is configured with public + private subnets, correct routes, and SG rules.
+- Cannot read objects in cloudlaunch-visible-only-bucket
