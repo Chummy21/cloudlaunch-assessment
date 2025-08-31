@@ -19,6 +19,7 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
   - `cloudlaunch-site-bucketchioma` (public read for website)
   - `cloudlaunch-private-bucketchioma` (private; IAM user Get/Put only; no Delete)
   - `cloudlaunch-visible-only-bucketchioma` (listable by IAM user; contents not accessible)
+  - ![Buckets Created](./images/EC2%20instance%20created.png)
 
 - **Website link**:
   - S3 website endpoint: [s3-website-endpoint](http://cloudlaunch-site-bucketchioma.s3-website-eu-west-1.amazonaws.com)
