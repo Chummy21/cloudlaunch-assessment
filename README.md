@@ -104,7 +104,7 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
     }
   ]
 }
-
+```
 ---
 
 - I Created a restricted IAM user cloudlaunch-user with read/write access to cloudlaunch-private-bucket, read-only access to cloudlaunch-   site-bucket, list-only access to cloudlaunch-visible-only-bucket, and read-only permissions for VPC resources, with no delete rights
@@ -115,9 +115,11 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
 
 ### Task 2: VPC Design for CloudLaunch Environment
 
-- I created my VPC,
-  VPC name: cloudlaunch-vpc
-  CIDR Block: 10.0.0.0/16
+- I created my VPC
+
+  -VPC name: cloudlaunch-vpc
+  
+  -CIDR Block: 10.0.0.0/16
 
  Subnets:
 
@@ -129,7 +131,20 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
 
  Subnets Created
 
- ![Dubnets Created](./images/subnets%20created.png
+ ![Subnets Created](./images/subnets%20created.png)
+
+Internet GateWay: cloudlaunch-igw (I attached the internet gateway to the cloudlaunch-vpc)
+
+ ![Internet Gateway](./images/Internet%20gateway.png)
+
+Route Tables:
+
+cloudlaunch-public-rt → 0.0.0.0/0 via cloudlaunch-igw (associated to public subnet)
+
+cloudlaunch-app-rt → no internet route (associated to app subnet)
+
+cloudlaunch-db-rt → no internet route (associated to db subnet)
+
 IGW: cloudlaunch-igw (attached to cloudlaunch-vpc)
 
 Route Tables:
@@ -139,3 +154,32 @@ cloudlaunch-public-rt → 0.0.0.0/0 via cloudlaunch-igw (associated to public su
 cloudlaunch-app-rt → no internet route (associated to app subnet)
 
 cloudlaunch-db-rt → no internet route (associated to db subnet)
+
+ ![route tables created](./images/route%20tables%20created.png)
+
+
+Security Groups:
+
+cloudlaunch-app-sg: allow inbound HTTP (80) from 10.0.0.0/16
+
+cloudlaunch-db-sg: allow inbound MySQL (3306) from 10.0.2.0/24
+
+Security Group Created:
+ ![Security Group](./images/Security%20Group.png)
+
+
+Testing Summary
+
+cloudlaunch-user can:
+
+List all three buckets
+
+Get from cloudlaunch-site-bucket
+
+Get/Put in cloudlaunch-private-bucket
+
+Cannot Delete anywhere
+
+Cannot read objects in cloudlaunch-visible-only-bucket
+
+VPC is configured with public + private subnets, correct routes, and SG rules.
