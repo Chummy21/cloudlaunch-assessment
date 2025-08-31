@@ -13,17 +13,19 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
 
 📌 All resources are created within the AWS Free Tier and follow best practices for access control and network segmentation.
 
-# CloudLaunch – AltSchool S3 + VPC Assessment
-
 ## Task 1: Static Website on S3 + IAM
+
 - **Buckets created**:
   - `cloudlaunch-site-bucketchioma` (public read for website)
   - `cloudlaunch-private-bucketchioma` (private; IAM user Get/Put only; no Delete)
   - `cloudlaunch-visible-only-bucketchioma` (listable by IAM user; contents not accessible)
 
 - **Website link**:
-  - S3 website endpoint: `http://<[s3-website-endpoint](http://cloudlaunch-site-bucketchioma.s3-website-eu-west-1.amazonaws.com)>`
+  - S3 website endpoint: [s3-website-endpoint](http://cloudlaunch-site-bucketchioma.s3-website-eu-west-1.amazonaws.com)
   - **Bonus (if used)**: CloudFront URL: `https://<your-distribution-id>.cloudfront.net`
+ 
+  - [https://chummy7.strangled.net](https://chummy7.strangled.net)
+
 
 - **IAM user**: `cloudlaunch-user`
   - Console sign-in URL: `https://<your-account-id-or-alias>.signin.aws.amazon.com/console`
