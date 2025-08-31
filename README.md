@@ -25,6 +25,9 @@ Static Website Hosting on S3 – Hosting a public website securely with read-onl
   - S3 website endpoint: [s3-website-endpoint](http://cloudlaunch-site-bucketchioma.s3-website-eu-west-1.amazonaws.com)
 
   - **Bonus (if used)**: CloudFront URL: [CloudFront URL](https://d2iqpmag3z7xtd.cloudfront.net/)`
+  - CloudFront Creation
+  - ![ClouFront](./images/cloud20%front20%distribution.png)
+
  
   - [https://chummy7.strangled.net](https://chummy7.strangled.net)
 
